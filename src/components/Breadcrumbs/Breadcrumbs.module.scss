@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   font-size: 0.9rem;
-  width: 20%;
+  width: 100%;
   height: 24px;
   gap: map.get(tokens.$spacing, '3xs');
 
@@ -27,5 +27,6 @@
   @include mixins.respond(desktop) {
     position: absolute;
     bottom: 105%;
+    width: 20%;
   }
 }
