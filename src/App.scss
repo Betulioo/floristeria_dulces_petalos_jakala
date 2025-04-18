@@ -1,0 +1,9 @@
+@use "sass:map"; // Importar la librería de mapas de Sass
+@use './styles/reset.scss'; // Importar reset de estilos
+@use "./styles/design-tokens" as tokens; // Importar variables de diseño
+@use './styles/_mixins' as mixins;
+@use "./styles/_utilities" as utilities; // Importar utilidades
+
+body {
+    background-color: map.get(tokens.$color-neutral, body);
+}

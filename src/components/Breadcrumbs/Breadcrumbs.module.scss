@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "../../styles/_design-tokens" as tokens;
+@use "../../styles/_mixins" as mixins;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  width: 20%;
+  height: 24px;
+  gap: map.get(tokens.$spacing, '3xs');
+
+
+  a {
+    color: map.get(tokens.$color-primary, 500);
+    text-decoration: none;
+    &.active {
+      font-weight: 700;
+    }
+  }
+
+  .separator {
+    margin: 0 0.5em;
+    color: map.get(tokens.$color-neutral, 500);
+  }
+
+  @include mixins.respond(desktop) {
+    position: absolute;
+    bottom: 105%;
+  }
+}

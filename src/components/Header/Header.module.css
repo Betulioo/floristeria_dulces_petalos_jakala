@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=DM+Sans:wght@400;700&display=swap");
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 66px;
+}
+
+.logo {
+  height: 50px;
+}/*# sourceMappingURL=Header.module.css.map */

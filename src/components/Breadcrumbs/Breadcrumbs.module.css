@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=DM+Sans:wght@400;700&display=swap");
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  width: 20%;
+  height: 24px;
+  gap: 4px;
+}
+.breadcrumb a {
+  color: #d50033;
+  text-decoration: none;
+}
+.breadcrumb a.active {
+  font-weight: 700;
+}
+.breadcrumb .separator {
+  margin: 0 0.5em;
+  color: #a4a4a4;
+}
+@media (min-width: 1025px) {
+  .breadcrumb {
+    position: absolute;
+    bottom: 105%;
+  }
+}/*# sourceMappingURL=Breadcrumbs.module.css.map */

@@ -1,0 +1,181 @@
+// Paleta de colores con opacidades y variantes
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=DM+Sans:wght@400;700&display=swap');
+$color-primary: (
+    10:rgba(#ffd1dc, 0.1),
+    50:rgba(#ffd1dc, 0.5),
+    100:rgba(#ffd1dc, 1),
+    200:rgba(#ff92ac, 1),
+    300:rgba(#ff547d, 1),
+    400:rgba(#ff154d, 1),
+    500:rgba(#d50033, 1),
+    600:rgba(#970024, 1),
+
+);
+$color-secondary: (
+    10:rgba(#f8b3cd, 0.1),
+    50:rgba(#f8b3cd, 0.5),
+    100:rgba(#f8b3cd, 1),
+    200:rgba(#f37eaa, 1),
+    300:rgba(#ee4a88, 1),
+    400:rgba(#e91665, 1),
+    500:rgba(#b5114f, 1),
+    600:rgba(#800c38, 1),
+
+);
+$color-accent: (
+    10:rgba(#e8a3bf, 0.1),
+    50:rgba(#e8a3bf, 0.5),
+    100:rgba(#f3d1df, 1),
+    200:rgba(#e8a3bf, 1),
+    300:rgba(#dc729d, 1),
+    400:rgba(#cf407a, 1),
+    500:rgba(#a82a5d, 1),
+    600:rgba(#771e42, 1),
+
+);
+$color-neutral: (
+    10:rgba(#333333, 0.1),
+    50:rgba(#333333, 0.5),
+    100:rgba(#ffffff, 1),
+    200:rgba(#e8e8e8, 1),
+    300:rgba(#d2d2d2, 1),
+    400:rgba(#bbbbbb, 1),
+    500:rgba(#a4a4a4, 1),
+    600:rgba(#8e8e8e, 1),
+    700:rgba(#777777, 1),
+    800:rgba(#606060, 1),
+    900:rgba(#4a4a4a, 1),
+    1000:rgba(#333333, 1),
+    body:rgba(#F9F9F9, 1),
+
+);
+$color-error: (
+    10:rgba(#ff9aa2, 0.1),
+    50:rgba(#ff9aa2, 0.5),
+    100:rgba(#ffcdd1, 1),
+    200:rgba(#ff9aa2, 1),
+    300:rgba(#ff5a67, 1),
+    400:rgba(#ff1a2c, 1),
+    500:rgba(#d90011, 1),
+    600:rgba(#99000c, 1),
+
+);
+
+$color-warning: (
+    10:rgba(#ffb7b2, 0.1),
+    50:rgba(#ffb7b2, 0.5),
+    100:rgba(#ffb7b2, 1),
+    200:rgba(#ff8178, 1),
+    300:rgba(#ff4a3e, 1),
+    400:rgba(#ff1403, 1),
+    500:rgba(#c80d00, 1),
+    600:rgba(#8e0900, 1),
+
+);
+$color-success: (
+    10:rgba(#b5e5cf, 0.1),
+    50:rgba(#b5e5cf, 0.5),
+    100:rgba(#daf2e7, 1),
+    200:rgba(#b5e5cf, 1),
+    300:rgba(#86d4b0, 1),
+    400:rgba(#56c491, 1),
+    500:rgba(#39a171, 1),
+    600:rgba(#287250, 1),
+
+);
+
+
+
+// Familias de fuentes (con variantes Nunito y DM Sans)
+$font-families: (
+  nunito:  ('Nunito', sans-serif),
+  'dm-sans': ('DM Sans', sans-serif)
+);
+
+// Pesos de fuente empleados
+$font-weights: (
+  regular: 400,
+  medium:  500,
+  bold:    700
+);
+
+// Tipografia
+
+$typography: (
+  h1: (font-size: 48px, line-height: 72px, letter-spacing: 0px),
+  h2: (font-size: 40px, line-height: 60px, letter-spacing: 0px),
+  h3: (font-size: 34px, line-height: 51px, letter-spacing: 0px),
+  h4: (font-size: 28px, line-height: 42px, letter-spacing: 0px),
+  h5: (font-size: 24px, line-height: 36px, letter-spacing: 0px),
+  h6: (font-size: 20px, line-height: 30px, letter-spacing: 0px),
+  // Body styles (textos de párrafo con variantes B-1 a B-4)
+  "b-1": (font-size: 16px, line-height: 24px, letter-spacing: 0px),
+  "b-2": (font-size: 14px, line-height: 21px, letter-spacing: 0px),
+  "b-3": (font-size: 12px, line-height: 18px, letter-spacing: 0px),
+  "b-4": (font-size: 10px, line-height: 15px, letter-spacing: 0px),
+);
+
+// Espaciado (padding/margin)
+$spacing: (
+  "3xs": 4px,
+  "2xs": 8px,
+  xs: 16px,
+  s: 24px,
+  md: 32px,
+  l: 48px,
+  xl: 64px,
+  "2xl": 80px,
+  "3xl": 120px,
+  "4xl": 96px,
+);
+
+// Bordes redondeados (radius)
+$radii: (
+  none: 0,
+  "2xs": 12px,
+  xs: 24px,
+  s: 36px,
+  m: 48px,
+  lg: 72px,
+  xl: 84px,
+  "3xl": 120px,
+  full: 999px,
+);
+
+// Stroke (grosor de bordes)
+$strokes: (
+  s: 0px,
+  m: 1px,
+  l: 2px,
+  xl: 4px,
+  "2xl": 6px,
+  "3xl": 8px,
+  "4xl": 10px,
+  "7xl": 12px,
+);
+
+// Efectos (shadows) según Figma E0–E9
+$effects: (
+  E0: 0px 0px 0px 0px rgba(27, 28, 29, 0),
+  E1: 0px 2px 4px 0px rgba(27, 28, 29, 0.04),
+  E2: 0px 16px 32px -12px rgba(88, 92, 95, 0.1),
+  E3: 0px 16px 40px -8px rgba(88, 92, 95, 0.16),
+  E4: 0px 16px 40px 0px rgba(88, 92, 95, 0.16),
+  E5: 0px 2px 4px 0px rgba(27, 28, 29, 0.04) inset,
+  E6: 0px 16px 32px -12px rgba(88, 92, 95, 0.1)inset,
+  E7: 0px 25px 36.5px -7px rgba(88, 92, 95, 0.16) inset,
+  E8: 0px 32px 33.2px -7px rgba(88, 92, 95, 0.16) inset,
+  E9: 0px 4px 20px -5px rgba(0, 146, 255, 0.12),
+  E10: 0px 4px 4px -1px rgba(12, 12, 13, 0.1)
+);
+
+// Colores de la paleta
+$colors: (
+  'color-primary': $color-primary,
+  'color-secondary': $color-secondary,
+  'color-accent': $color-accent,
+  'color-neutral': $color-neutral,
+  'color-error': $color-error,
+  'color-warning': $color-warning,
+  'color-success': $color-success
+);

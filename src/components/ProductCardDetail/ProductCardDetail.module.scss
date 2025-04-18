@@ -1,0 +1,85 @@
+@use "sass:map";
+@use "../../styles/_design-tokens" as tokens;
+@use "../../styles/_mixins" as mixins;
+
+
+
+
+.product-detail {
+  @include mixins.flex-center;
+  @include mixins.flex-column;
+  align-items: start;
+  justify-content: start;
+  width: 361px;
+  min-height: 598px;
+  gap: map.get(tokens.$spacing, l);
+  margin: 0 auto;
+  margin-top: 49px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+  }
+  .product-detail__container {
+    display: flex;
+    @include mixins.flex-column;
+    width: 100%;
+    height: 308px;
+    gap: map.get(tokens.$spacing, s);
+    justify-content: space-evenly;
+
+    .product-detail__container--text {
+      width: 100%;
+      height: 100px;
+      gap: map.get(tokens.$spacing, "3xs");
+    }
+    ul {
+      display: flex;
+      @include mixins.flex-column;
+      gap: map.get(tokens.$spacing, "2xs");
+      height: 50px;
+      width: 100%;
+
+      li {
+        &::before {
+          content: "•";
+          font-size: 10px;
+        }
+      }
+    }
+    button {
+        width: 100%;
+        height: 44px;
+    }
+  }
+
+
+  @include mixins.respond(desktop){
+    width: 1200px;
+    min-height: 905px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 119px;
+
+    img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        flex: 1;
+    }
+    .product-detail__container {
+        width: 50%;
+        flex: 1;
+    button {
+    width: 136px;    
+    }
+    }
+
+  }
+}
+
+
+
+

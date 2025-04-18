@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=DM+Sans:wght@400;700&display=swap");
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 64px;
+}
+
+.productList {
+  flex: 1;
+  padding: 32px;
+}/*# sourceMappingURL=Home.module.css.map */

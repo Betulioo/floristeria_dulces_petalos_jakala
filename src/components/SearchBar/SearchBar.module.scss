@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "../../styles/_design-tokens" as tokens;
+@use "../../styles/_mixins" as mixins;
+
+.search-bar {
+  @include mixins.flex-center;
+  @include mixins.flex-column;
+  gap: map.get(tokens.$spacing, xs);
+  height: 40px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #bbbbbb;
+  position: relative;
+        
+      &::before{
+      content: " ";
+      position: absolute;
+      left: 10px;
+      background-image: url(../../assets/icons/search_icon.svg);
+      width: 20px;
+      height: 20px;
+    }
+
+  .search-bar__input {
+    width: 90%;
+    
+  }
+      @include mixins.respond(desktop) {
+       width: 600px;
+        height: 40px;
+    }
+}

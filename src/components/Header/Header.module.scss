@@ -1,0 +1,13 @@
+@use "sass:map"; 
+@use "../../styles/_design-tokens" as tokens; 
+@use '../../styles/_mixins' as mixins;
+
+.header {
+  @include mixins.flex-center;
+  background-color: map.get(tokens.$color-neutral, 100);
+  height: 66px;
+}
+
+.logo {
+  height: 50px;
+}

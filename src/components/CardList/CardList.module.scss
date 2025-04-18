@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../../styles/_design-tokens" as tokens; 
+@use '../../styles/_mixins' as mixins;
+
+.card-list {
+    @include mixins.flex-center;
+    @include mixins.flex-column;
+    gap: map.get(tokens.$spacing, xs);
+    padding-right: map.get(tokens.$spacing, xs);
+    padding-left: map.get(tokens.$spacing, xs);
+    margin-top: 114px;
+    max-width: 1200px;
+    max-height: 956px;
+    margin: 0 auto;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+
+    @include mixins.respond(tablet) {
+        grid-template-columns: repeat(2,1fr);
+    gap: map.get(tokens.$spacing, xl);
+
+    }
+    @include mixins.respond(desktop) {
+        grid-template-columns: repeat(3,1fr);
+    }
+}

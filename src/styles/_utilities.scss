@@ -1,0 +1,56 @@
+@use "sass:map"; 
+@use './design-tokens' as tokens; 
+// ----- Colores primarios, secundarios, accent, neutral, etc. -----
+@each $palette in map.keys(tokens.$colors) {
+  $palette-map: map.get(tokens.$colors, $palette);
+  @each $opacity, $color in $palette-map {
+    .bg-#{$palette}-#{$opacity}    { background-color: $color !important; }
+    .text-#{$palette}-#{$opacity}  { color: $color !important; }
+    .border-#{$palette}-#{$opacity} { border-color: $color !important; }
+  }
+}
+
+// ----- Familias de fuentes -----
+@each $name, $family in tokens.$font-families {
+  .font-#{$name} { font-family: $family !important; }
+}
+
+// ----- Pesos de fuente -----
+@each $weight-name, $weight-value in tokens.$font-weights {
+  .fw-#{$weight-name} { font-weight: $weight-value !important; }
+}
+
+// ----- Tipografía -----
+@each $name, $config in tokens.$typography {
+  .#{$name} {
+    font-size:       map.get($config, font-size) !important;
+    line-height:     map.get($config, line-height) !important;
+    letter-spacing:  map.get($config, letter-spacing) !important;
+  }
+}
+
+// ----- Espaciado -----
+@each $suffix, $size in tokens.$spacing {
+  .p-#{$suffix}  { padding: $size !important; }
+  .m-#{$suffix}  { margin: $size !important; }
+  .pt-#{$suffix} { padding-top: $size !important; }
+  .pr-#{$suffix} { padding-right: $size !important; }
+  .pb-#{$suffix} { padding-bottom: $size !important; }
+  .pl-#{$suffix} { padding-left: $size !important; }
+}
+
+// ----- Bordes redondeados -----
+@each $name, $radius in tokens.$radii {
+  .rounded-#{$name} { border-radius: $radius !important; }
+}
+
+// ----- Grosor de bordes -----
+@each $name, $width in tokens.$strokes {
+  .border-#{$name} { border-width: $width !important; }
+}
+
+// Efectos (shadows)
+@each $name, $shadow in tokens.$effects {
+  .shadow-#{$name} { box-shadow: $shadow !important; }
+}
+

@@ -1,0 +1,16 @@
+@use "sass:map"; 
+@use "../../styles/_design-tokens" as tokens; 
+@use '../../styles/_mixins' as mixins;
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: map.get(tokens.$spacing, xl)
+}
+
+.productList {
+  flex: 1;
+  padding: map.get(tokens.$spacing, md);  
+
+}
